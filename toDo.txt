@@ -1,1 +1,3 @@
 - Pour commandes charge et fire : si pas de second mot : on utilise Beamer par défaut.
+- Déplacement aléatoire d'un Personnage dans les pièces.
+- Héritage de player de Character ?? utile ou non ??
