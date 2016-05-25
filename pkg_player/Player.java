@@ -2,6 +2,8 @@ package pkg_player;
 
 import pkg_item.Beamer;
 import pkg_item.ItemList;
+import pkg_item.MovingCharacter;
+
 import pkg_room.Room;
 
 import java.util.HashMap;
@@ -22,6 +24,7 @@ public class Player
     private int aMaxWeight;
     private ItemList aItemList;
     private int aTimeLimit;
+    private ItemList aMovingCharacterList;
 
     /**
      * Constructeur : On initialise seulement la salle courante.
@@ -32,6 +35,7 @@ public class Player
         this.aCurrentRoom = pCurrentRoom;
         this.aLastRoom = new Stack<Room>();
         this.aItemList = new ItemList();
+        this.aMovingCharacterList = new ItemList();
         this.aMaxWeight = 4;
         this.aTimeLimit = 20;
     }//Player
@@ -184,6 +188,25 @@ public class Player
      */
     public ItemList getItemList(){
         return this.aItemList;
+    }
+
+    /**
+     * getMovingCharacters() : Permet de récupérer la liste des MovingCharacters
+     * @return ItemList retourne l'itemlist des MovingCharacters
+     */
+    public ItemList getMovingCharacters(){
+        return this.aMovingCharacterList;
+    }
+
+    /**
+     * moveCharacters() : Déplace les MovingCharacters
+     */
+    public void moveCharacters(){
+      Object[] vValues = this.aMovingCharacterList.getItemList().values().toArray();
+      for(int i = 0; i < vValues.length; i++){
+          MovingCharacter vCharacter = (MovingCharacter) vValues[i];
+          vCharacter.move();
+      }
     }
 
      /**

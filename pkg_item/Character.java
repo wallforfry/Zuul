@@ -71,6 +71,19 @@ import pkg_item.Item;
    }
 
    /**
+    * hasItem() : Check Item'
+    * @return Présent ou non;
+    */
+   public boolean hasItem() {
+     if(this.aItem == null){
+        return false;
+      }
+      else{
+        return true;
+      }
+   }
+
+   /**
     * setItem() : Setter de l'item
     * @param pItem
     */

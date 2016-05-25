@@ -39,6 +39,7 @@ public class GoCommand extends Command {
             pPlayer.setLastRoom(null);
         }
         pPlayer.changeRoom(vNextRoom);
+				pPlayer.moveCharacters();
         GameEngine.aGui.println("New Current Room : "+pPlayer.getCurrentRoom().getLongDescription());
         GameEngine.aGui.println(pPlayer.inventory());
         GameEngine.displayImage(pPlayer);

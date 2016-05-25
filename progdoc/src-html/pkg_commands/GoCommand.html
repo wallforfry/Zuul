@@ -47,15 +47,16 @@
 <span class="sourceLineNo">039</span>            pPlayer.setLastRoom(null);<a name="line.39"></a>
 <span class="sourceLineNo">040</span>        }<a name="line.40"></a>
 <span class="sourceLineNo">041</span>        pPlayer.changeRoom(vNextRoom);<a name="line.41"></a>
-<span class="sourceLineNo">042</span>        GameEngine.aGui.println("New Current Room : "+pPlayer.getCurrentRoom().getLongDescription());<a name="line.42"></a>
-<span class="sourceLineNo">043</span>        GameEngine.aGui.println(pPlayer.inventory());<a name="line.43"></a>
-<span class="sourceLineNo">044</span>        GameEngine.displayImage(pPlayer);<a name="line.44"></a>
-<span class="sourceLineNo">045</span>    }//else<a name="line.45"></a>
-<span class="sourceLineNo">046</span><a name="line.46"></a>
-<span class="sourceLineNo">047</span>                return false;<a name="line.47"></a>
-<span class="sourceLineNo">048</span>        }<a name="line.48"></a>
-<span class="sourceLineNo">049</span><a name="line.49"></a>
-<span class="sourceLineNo">050</span>}<a name="line.50"></a>
+<span class="sourceLineNo">042</span>                                pPlayer.moveCharacters();<a name="line.42"></a>
+<span class="sourceLineNo">043</span>        GameEngine.aGui.println("New Current Room : "+pPlayer.getCurrentRoom().getLongDescription());<a name="line.43"></a>
+<span class="sourceLineNo">044</span>        GameEngine.aGui.println(pPlayer.inventory());<a name="line.44"></a>
+<span class="sourceLineNo">045</span>        GameEngine.displayImage(pPlayer);<a name="line.45"></a>
+<span class="sourceLineNo">046</span>    }//else<a name="line.46"></a>
+<span class="sourceLineNo">047</span><a name="line.47"></a>
+<span class="sourceLineNo">048</span>                return false;<a name="line.48"></a>
+<span class="sourceLineNo">049</span>        }<a name="line.49"></a>
+<span class="sourceLineNo">050</span><a name="line.50"></a>
+<span class="sourceLineNo">051</span>}<a name="line.51"></a>
 
 
 

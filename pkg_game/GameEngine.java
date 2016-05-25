@@ -9,6 +9,7 @@ import pkg_player.Player;
 import pkg_item.Beamer;
 import pkg_item.Item;
 import pkg_item.Character;
+import pkg_item.MovingCharacter;
 
 import pkg_room.TransporterRoom;
 import pkg_room.Room;
@@ -79,11 +80,6 @@ public class GameEngine
         vCookie = new Item(1, "Cookie");
         vBeamer = (Item) new Beamer(0, "Beamer");
 
-        Character vCharacter1;
-        vCharacter1 = new Character("Name", "Description", "Speak");
-        vCharacter1.setItem(vCookie);
-        vSalle.addCharacter(vCharacter1);
-
 
         vSalle.setExits("Icampus", vIcampus);
         vSalle.setExits("Upstairs", vUpstairs);
@@ -123,6 +119,25 @@ public class GameEngine
         vRandom.setExits("Internet", vInternet);
 
         aPlayer = new Player(vSalle);
+
+
+        Character vCharacter1;
+        vCharacter1 = new Character("Quentin", "Un garçon", "Salut je suis Quentin");
+        vCharacter1.setItem(vCookie);
+        vSalle.addCharacter(vCharacter1);
+
+        MovingCharacter vCharacter2;
+        vCharacter2 = new MovingCharacter("Johana", "Une fille", "Salut, je suis Johana");
+        vCharacter2.addRoom(vInternet);
+        vCharacter2.addRoom(vIcampus);
+        vSalle.addCharacter(vCharacter2);
+        aPlayer.getMovingCharacters().setItem(vCharacter2.getName(), vCharacter2);
+
+        MovingCharacter vCharacter3;
+        vCharacter3 = new MovingCharacter("Alice", "Une autre fille", "Salut, je suis Alice");
+        vCharacter3.addRoom(vIcampus);
+        vInternet.addCharacter(vCharacter3);
+        aPlayer.getMovingCharacters().setItem(vCharacter3.getName(), vCharacter3);
     }//createRooms
 
      /**

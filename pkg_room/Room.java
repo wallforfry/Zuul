@@ -126,6 +126,14 @@ public class Room
       }
 
       /**
+       * removeCharacter : Retire un Character à la pièce
+       * @param pCharacter Personnage à retirer de la pièce
+       */
+      public void removeCharacter(final Character pCharacter) {
+          this.aCharactersList.removeItem(pCharacter.getName());
+      }
+
+      /**
        * getCharacter : Renvoi le Character choisi de la pièce
        * @param pName Nom du character
        * @return Character sous forme d'Item

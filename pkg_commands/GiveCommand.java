@@ -25,11 +25,16 @@ public class GiveCommand extends Command {
 
               if(pPlayer.getItemList().containsKey(this.getSecondWord())){
 
-                  pPlayer.getItemList().setItem(vCharacter.getItem().getDescription(), vCharacter.getItem());
-      		        GameEngine.aGui.println(vCharacter.getName()+" give "+vCharacter.getItem().getDescription()+" in exchange for "+this.getSecondWord());
+									if(vCharacter.hasItem()){
+		                  pPlayer.getItemList().setItem(vCharacter.getItem().getDescription(), vCharacter.getItem());
+		      		        GameEngine.aGui.println(vCharacter.getName()+" give "+vCharacter.getItem().getDescription()+" in exchange for "+this.getSecondWord());
 
-                  vCharacter.setItem(pPlayer.getItemList().getItem(this.getSecondWord()));
-                  pPlayer.getItemList().removeItem(this.getSecondWord());
+		                  vCharacter.setItem(pPlayer.getItemList().getItem(this.getSecondWord()));
+		                  pPlayer.getItemList().removeItem(this.getSecondWord());
+									}
+									else{
+										GameEngine.aGui.println(vCharacter.getName()+" hasn't got any item");
+									}
               }
               else {
                 GameEngine.aGui.println("You don't have "+this.getSecondWord()+" in your inventory");

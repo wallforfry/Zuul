@@ -80,4 +80,12 @@ public class ItemList
         return this.aItems.containsKey(pName);
     }
 
+    /**
+     * getItemList() : Permet de récupérer la liste complète
+     * @return aItems : Liste complète
+     */
+    public HashMap<String, Item> getItemList(){
+        return this.aItems;
+    }//getItemList
+
 }
