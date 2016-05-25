@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=pDescription\ pImage
+comment0.target=TransporterRoom(java.lang.String,\ java.lang.String)
+comment0.text=\n\ Constructeur\ de\ la\ classe\n
+comment1.params=pDirection
+comment1.target=Room\ getExits(java.lang.String)
+comment1.text=\n\ getExits\ Overrited\n\ @param\ pDirection\n\ \ \ \ \ \ \ \ \ \ Direction\ \u00E0\ interroger\n\ @return\ Room\ Renvoi\ la\ Room\ o\u00F9\ aller\n
+comment2.params=
+comment2.target=Room\ findRandomRoom()
+comment2.text=\n\ findRandomRoom\n\ @return\ Room\ Renvoi\ une\ Room\ au\ hasard\n
+comment3.params=
+comment3.target=java.lang.String\ getLongDescription()
+comment3.text=\n\ getLongDescription()\n\ @return\ Renvoi\ la\ description\ de\ la\ Room\ +\ sorties\ +\ items\ pr\u00E9sents\n
+numComments=4

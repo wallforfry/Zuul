@@ -1,0 +1,19 @@
+help
+get Beamer
+charge Beamer
+get Clavier
+go Icampus
+get Cookie
+look
+inventory
+eat
+eat Clavier
+eat Cookie
+go Internet
+go Book
+go Forum
+back
+back
+fire Beamer
+go Upstairs
+drop Clavier

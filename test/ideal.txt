@@ -1,0 +1,27 @@
+get Beamer
+get Clavier
+charge Beamer
+go Icampus
+get Cours
+go Internet
+get Bluej
+back
+back
+go Upstairs
+drop Clavier
+drop Cours
+drop Bluej
+fire Beamer
+go Icampus
+go Internet
+get Compilateur
+go Forum
+get Variable
+go Book
+get Methode
+go Icampus
+go Classroom
+go Upstairs
+drop Compilateur
+drop Variable
+drop Methode

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Parser()
+comment0.text=\n\ Constructeur\ par\ defaut\ qui\ cree\ les\ 2\ objets\ prevus\ pour\ les\ attributs\n
+comment1.params=inputLine
+comment1.target=Command\ getCommand(java.lang.String)
+comment1.text=\n\ @return\ The\ next\ command\ from\ the\ user.\n
+comment2.params=
+comment2.target=java.lang.String\ showCommands()
+comment2.text=\n\ showCommands()\ \:\ Permet\ de\ r\u00E9cup\u00E9rer\ les\ mots\ de\ commande\ d\u00E9clar\u00E9s\ dans\ CommandWords\n\ @return\ Mots\ de\ commandes\n
+numComments=3

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=pRoomList
+comment0.target=RoomRandomizer(java.util.HashMap)
+comment0.text=\n\ Constructeur\ de\ la\ classe\n
+comment1.params=pAleaRoom
+comment1.target=java.lang.String\ setAleaRoom(java.lang.String)
+comment1.text=\n\ Setter\ de\ aAleaRoom\n\ @param\ String\ pAleaRoom\n
+comment2.params=
+comment2.target=Room\ getRandomRoom()
+comment2.text=\n\ getRandomRoom\ Renvoi\ une\ Room\ random\n\ @return\ A\ Random\ Room\n
+numComments=3

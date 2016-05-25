@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.params=
+comment0.target=ItemList()
+comment1.params=pName
+comment1.target=Item\ getItem(java.lang.String)
+comment1.text=\n\ getPlayerItem()\ \:\ Permet\ de\ r\u00E9cup\u00E9rer\ un\ Item\ en\ fonction\ du\ nom\ avec\ lequel\ il\ est\ stock\u00E9\ dans\ la\ HashMap\ aPlayerItems\n\ @param\ pName\ Nom\ auquel\ est\ associ\u00E9\ l'item\n\ @return\ Item\ correspondant\ \u00E0\ pName\n
+comment2.params=
+comment2.target=java.lang.String\ getItemsString()
+comment2.text=\n\ getItemsString()\n\ @return\ Renvoi\ les\ items\ pr\u00E9sents\ format\u00E9es\n
+comment3.params=pName\ pItem
+comment3.target=void\ setItem(java.lang.String,\ Item)
+comment3.text=\n\ setItem()\ \:\ Permet\ d'ajouter\ un\ item\n\ @param\ pName\ Nom\ de\ l'item\ (key\ de\ la\ HashMap)\n\ @param\ pItem\ Item\ correspondant\ (Value\ de\ la\ HashMap)\n
+comment4.params=pName
+comment4.target=void\ removeItem(java.lang.String)
+comment4.text=\n\ removeItem()\n\ @param\ pName\n\ \ \ \ \ \ Nom\ \u00E0\ retirer\n
+comment5.params=
+comment5.target=int\ getTotalWeight()
+comment5.text=\n\ getTotalWeight()\ \:\ Permet\ de\ r\u00E9cup\u00E9rer\ le\ poids\ total\ actuellement\ port\u00E9\ par\ le\ joueur\n\ @return\ Poids\ total\ des\ Items\ port\u00E9s\n
+comment6.params=pName
+comment6.target=boolean\ containsKey(java.lang.String)
+comment6.text=\n\ containsKey()\ \:\ Teste\ si\ l'item\ est\ dans\ la\ liste\n\ @param\ pName\ Nom\ auquel\ est\ associ\u00E9\ l'item\n\ @return\ boolean\ true\ si\ l'item\ est\ dans\ la\ liste\n
+numComments=7

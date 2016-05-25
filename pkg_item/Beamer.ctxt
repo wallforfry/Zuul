@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=pWeight\ pDescription
+comment0.target=Beamer(int,\ java.lang.String)
+comment0.text=\n\ Constructeur\ du\ beamer\n
+comment1.params=pTargetRoom
+comment1.target=java.lang.String\ charge(Room)
+comment2.params=
+comment2.target=Room\ fire()
+comment3.params=
+comment3.target=boolean\ isCharged()
+numComments=4
