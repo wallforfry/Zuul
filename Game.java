@@ -18,10 +18,17 @@ public class Game
      */
     public Game()
     {
-        aEngine = new GameEngine();
-        aGui = new UserInterface(aEngine);
-        aEngine.setGUI(aGui);
+
     }//Game default
+
+    /**
+     * Play() Permet de démarrer le jeu.
+     */
+    public void play(){
+      aEngine = new GameEngine();
+      aGui = new UserInterface(aEngine);
+      aEngine.setGUI(aGui);
+    }//play
 
 
 } // Game
