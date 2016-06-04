@@ -29,7 +29,7 @@ if echo "$answer" | grep -iq "^Y" ;then
     read answer
     if echo "$answer" | grep -iq "^Y" ;then
         #Lister les fichiers
-        jar tf ../test.jar
+        jar tf ../"$name".jar
     else
         echo "$name.jar is ready"
     fi
