@@ -1,7 +1,6 @@
  import pkg_game.UserInterface;
  import pkg_game.GameEngine;
 
-
 /**
  * Classe Game qui lie l'interface et le moteur du jeu
  *

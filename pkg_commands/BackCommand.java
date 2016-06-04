@@ -17,18 +17,23 @@ public class BackCommand extends Command {
 
 				String vReturn = "";
 
-				if(pPlayer.hasLastRoom()){
-						if(pPlayer.peekLastRoom() == null){
-								vReturn = "You can't go back, it's a trapdoor !";
+				if(!this.hasSecondWord()){
+						if(pPlayer.hasLastRoom()){
+								if(pPlayer.peekLastRoom() == null){
+										vReturn = "You can't go back, it's a trapdoor !";
+								}
+								else{
+										pPlayer.setCurrentRoom(pPlayer.getLastRoom());
+										vReturn = "New Current Room : "+pPlayer.getCurrentRoom().getLongDescription();
+										GameEngine.displayImage(pPlayer);
+								}
 						}
 						else{
-								pPlayer.setCurrentRoom(pPlayer.getLastRoom());
-								vReturn = "New Current Room : "+pPlayer.getCurrentRoom().getLongDescription();
-								GameEngine.displayImage(pPlayer);
+								vReturn = "There is no previous room";
 						}
 				}
 				else{
-						vReturn = "There is no previous room";
+					vReturn = "Back what ?";
 				}
 
 				GameEngine.aGui.println(vReturn);

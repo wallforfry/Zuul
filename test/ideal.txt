@@ -1,6 +1,7 @@
 get Beamer
 get Clavier
 charge Beamer
+talk Johana
 go Icampus
 get Cours
 go Internet

@@ -1,12 +1,11 @@
-help
-look
 go Icampus
 go Book
 go Forum
 go Internet
 go Icampus
-back
-back
-go Icampus
 go Classroom
-eat
+alea Icampus
+go Random
+go Somewhere
+go Classroom
+go Upstairs
