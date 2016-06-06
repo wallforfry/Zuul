@@ -10,6 +10,7 @@ import pkg_item.Beamer;
 import pkg_item.Item;
 import pkg_item.Character;
 import pkg_item.MovingCharacter;
+import pkg_item.ProfessorCharacter;
 
 import pkg_room.TransporterRoom;
 import pkg_room.Room;
@@ -75,69 +76,92 @@ public class GameEngine
         vCours = new Item(2, "Cours");
         vCompilateur = new Item(1, "Compilateur");
         vBluej = new Item(1, "Bluej");
-        vMethode = new Item(1, "Méthode");
+        vMethode = new Item(1, "Methode");
         vVariable = new Item(1, "Variable");
         vCookie = new Item(1, "Cookie");
         vBeamer = (Item) new Beamer(0, "Beamer");
 
 
+        //Classroom
         vSalle.setExits("Icampus", vIcampus);
         vSalle.setExits("Upstairs", vUpstairs);
-        vSalle.setItem("Clavier", vClavier);
-        vSalle.setItem("Beamer", vBeamer);
         vSalle.setExits("Random", vRandom);
 
+        vSalle.setItem("Clavier", vClavier);
+        vSalle.setItem("Beamer", vBeamer);
+
+        //Icampus
         vIcampus.setExits("Internet", vInternet);
         vIcampus.setExits("Book", vLivre);
         vIcampus.setExits("Forum", vForum);
         vIcampus.setExits("Classroom", vSalle);
+
         vIcampus.setItem("Cours", vCours);
         vIcampus.setItem("Cookie", vCookie);
 
+        //Internet
         vInternet.setExits("Icampus", vIcampus);
         vInternet.setExits("Forum", vForum);
         vInternet.setExits("Book", vLivre);
+
         vInternet.setItem("Bluej", vBluej);
         vInternet.setItem("Compilateur", vCompilateur);
 
+        //Forum
         vForum.setExits("Book", vLivre);
         vForum.setExits("Icampus", null);
         vForum.setExits("Internet", vInternet);
+
         vForum.setItem("Variable", vVariable);
 
+        //Livre
         vLivre.setExits("Forum", vForum);
         vLivre.setExits("Icampus", vIcampus);
         vLivre.setExits("Internet", vInternet);
+
         vLivre.setItem("Methode", vMethode);
 
+        //upstairs
         vUpstairs.setExits("Classroom", vSalle);
 
+        //random
         vRandom.setExits("Icampus", vIcampus);
         vRandom.setExits("Forum", vForum);
         vRandom.setExits("Book", vLivre);
         vRandom.setExits("Classroom", vSalle);
         vRandom.setExits("Internet", vInternet);
 
+
         aPlayer = new Player(vSalle);
 
 
         Character vCharacter1;
-        vCharacter1 = new Character("Quentin", "Un garçon", "Salut je suis Quentin");
+        vCharacter1 = new Character("Quentin", "A young man", "Hi, I'm Quentin, if you give me something I can give you a MagicCookie");
         vCharacter1.setItem(vCookie);
         vSalle.addCharacter(vCharacter1);
 
         MovingCharacter vCharacter2;
-        vCharacter2 = new MovingCharacter("Johana", "Une fille", "Salut, je suis Johana");
+        vCharacter2 = new MovingCharacter("Johana", "A girl", "Hi, I'm Johana, if you give me something I can give you Internet object");
         vCharacter2.addRoom(vInternet);
         vCharacter2.addRoom(vIcampus);
         vSalle.addCharacter(vCharacter2);
-        aPlayer.getMovingCharacters().setItem(vCharacter2.getName(), vCharacter2);
+        aPlayer.getCharacters().setItem(vCharacter2.getName(), vCharacter2);
 
         MovingCharacter vCharacter3;
-        vCharacter3 = new MovingCharacter("Alice", "Une autre fille", "Salut, je suis Alice");
+        vCharacter3 = new MovingCharacter("Alice", "Another girl", "Hi, I'm Alice, if you give me something I can give you Icampus object");
         vCharacter3.addRoom(vIcampus);
         vInternet.addCharacter(vCharacter3);
-        aPlayer.getMovingCharacters().setItem(vCharacter3.getName(), vCharacter3);
+        aPlayer.getCharacters().setItem(vCharacter3.getName(), vCharacter3);
+
+        ProfessorCharacter vProfessorCharacter = new ProfessorCharacter("JavAnatole", "The professor", "Hi, I'm your java's professor, give me all founded objects to win");
+        vProfessorCharacter.addWinItem(vClavier);
+        vProfessorCharacter.addWinItem(vCours);
+        vProfessorCharacter.addWinItem(vCompilateur);
+        vProfessorCharacter.addWinItem(vBluej);
+        vProfessorCharacter.addWinItem(vMethode);
+        vProfessorCharacter.addWinItem(vVariable);
+        vUpstairs.addCharacter(vProfessorCharacter);
+        aPlayer.getCharacters().setItem(vProfessorCharacter.getName(), vProfessorCharacter);
     }//createRooms
 
      /**

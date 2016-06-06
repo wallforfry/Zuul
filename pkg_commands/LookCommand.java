@@ -26,11 +26,12 @@ public class LookCommand extends Command {
 			else{
 				GameEngine.aGui.println("This item is not in your inventory or in this room");
 			}
-			
+
 		}
 		else{
         GameEngine.aGui.println(pPlayer.getCurrentRoom().getLongDescription());
         GameEngine.aGui.println(pPlayer.inventory());
+				GameEngine.aGui.println("You can move "+pPlayer.getTimeLimit()+" time");
 		}
 
 		return false;

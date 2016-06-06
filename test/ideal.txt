@@ -23,6 +23,12 @@ get Methode
 go Icampus
 go Classroom
 go Upstairs
-drop Compilateur
-drop Variable
-drop Methode
+give Compilateur to JavAnatole
+give Variable to JavAnatole
+give Methode to JavAnatole
+get Clavier
+get Bluej
+get Cours
+give Clavier to JavAnatole
+give Bluej to JavAnatole
+give Cours to JavAnatole

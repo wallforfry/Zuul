@@ -81,6 +81,14 @@ public class ItemList
     }
 
     /**
+      * isEmpty() : Test si la liste est Vide
+      * @return true or false if empty or not
+      */
+    public boolean isEmpty(){
+      return this.aItems.isEmpty();
+    }
+
+    /**
      * getItemList() : Permet de récupérer la liste complète
      * @return aItems : Liste complète
      */

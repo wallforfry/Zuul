@@ -3,6 +3,7 @@ package pkg_commands;
 import pkg_player.Player;
 
 import pkg_item.Character;
+import pkg_item.ProfessorCharacter;
 
 import pkg_game.GameEngine;
 
@@ -20,7 +21,13 @@ public class TalkCommand extends Command {
     if(pPlayer.getCurrentRoom().hasCharacter(this.getSecondWord())) {
 
         Character vCharacter = (Character) pPlayer.getCurrentRoom().getCharacter(this.getSecondWord());
-		    GameEngine.aGui.println(vCharacter.getName()+" tell : "+vCharacter.getSpeak());
+				if(vCharacter instanceof ProfessorCharacter){
+						ProfessorCharacter vProfessorCharacter = (ProfessorCharacter) pPlayer.getCurrentRoom().getCharacter(this.getSecondWord());
+						GameEngine.aGui.println(vProfessorCharacter.getName()+" tell : "+vProfessorCharacter.getRemainsItem());
+				}
+				else{
+				    GameEngine.aGui.println(vCharacter.getName()+" tell : "+vCharacter.getSpeak());
+				}
     }
     else {
         GameEngine.aGui.println(this.getSecondWord()+" isn't in "+pPlayer.getCurrentRoom().getDescription());

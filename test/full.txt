@@ -10,10 +10,13 @@ eat
 eat Clavier
 eat Cookie
 go Internet
+get Bluej
 go Book
 go Forum
 back
 back
 fire Beamer
 go Upstairs
+talk JavAnatole
+give Bluej to JavAnatole
 drop Clavier

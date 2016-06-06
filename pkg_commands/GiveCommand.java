@@ -3,6 +3,7 @@ package pkg_commands;
 import pkg_player.Player;
 
 import pkg_item.Character;
+import pkg_item.ProfessorCharacter;
 
 import pkg_game.GameEngine;
 
@@ -31,6 +32,15 @@ public class GiveCommand extends Command {
 
 		                  vCharacter.setItem(pPlayer.getItemList().getItem(this.getSecondWord()));
 		                  pPlayer.getItemList().removeItem(this.getSecondWord());
+									}
+									else if(vCharacter instanceof ProfessorCharacter){
+										ProfessorCharacter vProfessorCharacter = (ProfessorCharacter) pPlayer.getCurrentRoom().getCharacter(this.getThirdWord());
+										vProfessorCharacter.setItem(this.getSecondWord());
+										pPlayer.getItemList().removeItem(this.getSecondWord());
+										GameEngine.aGui.println(vProfessorCharacter.getName()+" tell : Thank you, "+vProfessorCharacter.getRemainsItem());
+										if(vProfessorCharacter.hasNoMoreItem()){
+										GameEngine.aGui.enable(false);
+										}
 									}
 									else{
 										GameEngine.aGui.println(vCharacter.getName()+" hasn't got any item");
